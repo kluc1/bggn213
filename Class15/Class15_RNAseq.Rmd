@@ -2,7 +2,9 @@
 title: "Class15_RNAseq"
 author: 'San Luc (PID: A59010657)'
 date: "11/17/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 
@@ -198,6 +200,14 @@ abline(v=c(-2, 2), col= "gray")
 abline(h=-log(0.05), col="gray")
 ```
 
+Let's finally save our results to date. 
+
+```{r}
+write.csv(res, file = "allmyresult.csv")
+```
+
+
+
 ```{r}
 library("AnnotationDbi")
 library("org.Hs.eg.db")
@@ -206,18 +216,67 @@ library("org.Hs.eg.db")
 ```{r}
 columns(org.Hs.eg.db)
 ```
-```{r}
-res$symbol <- mapIds(org.Hs.eg.db,
-                     keys=row.names(res),
-                     keytype="ENSEMBL",       
-                     column="SYMBOL",          
-                     multiVals="first")
-head(res)
+
+
+# Pathway analysis
+
+let's try to bring some biology insight back into this work, for this we will start with KEGG
+
+```{r message=FALSE}
+library(pathview)
+library(gage)
+library(gageData)
 ```
 
-Let's finally save our results to date. 
-
 ```{r}
-write.csv(res, file = "allmyresult.csv")
+data(kegg.sets.hs)
 ```
 
+```{r}
+# Examine the first 2 pathways in this kegg set for humans
+head(kegg.sets.hs, 2)
+```
+Before we can use KEGG we need to get our gene identifier in the correct format for KEGG, which is ENTREZ format in this case. 
+
+```{r}
+res$entrez <- mapIds(org.Hs.eg.db,
+       keys = row.names(res),
+       keytype = "ENSEMBL",
+       column = "ENTREZID",
+       MultiVals = "First")
+
+res$genenames <- mapIds(org.Hs.eg.db,
+       keys = row.names(res),
+       keytype = "ENSEMBL",
+       column = "GENENAME",
+       MultiVals = "First")
+
+```
+assign names to this vector that are the gene IDs that KEGG wants 
+
+```{r}
+foldchanges = res$log2FoldChange
+names(foldchanges) <- res$entrez
+head(foldchanges)
+```
+
+Now we are ready for the **gage()** function
+
+```{r}
+keggres = gage(foldchanges, gsets=kegg.sets.hs)
+```
+
+We can look at the attributes() of this or indeed any R pbject 
+
+```{r}
+attributes(keggres)
+```
+
+```{r}
+head(keggres$less,3)
+```
+
+```{r}
+pathview(gene.data=foldchanges, pathway.id="hsa04940")
+```
+![](hsa04940.pathview.png)
