@@ -1,0 +1,79 @@
+---
+title: "favorite_gene_project"
+author: 'San Luc (PID: A59010657)'
+date: "11/26/2021"
+output: html_document
+---
+
+```{r}
+library(bio3d)
+```
+Read the alignment sequence using read.fasta()
+```{r}
+MSA <- read.fasta("msa.txt")
+```
+To calculate the sequence identity matrix, we will use seqidentity()
+
+```{r}
+seqid <- seqidentity(MSA)
+seqid
+```
+To create a heatmap, use the sequence identity above and the function heatmap()
+
+```{r}
+heatmap(seqid, margins = c(10,10))
+```
+
+```{r}
+rowSums(seqid)
+```
+
+
+```{r}
+sum(seqid[1,])
+sum(seqid[2,])
+sum(seqid[3,])
+sum(seqid[4,])
+sum(seqid[5,])
+```
+Since there are a lot of gaps between these, we will use the original sequence instead. 
+
+```{r}
+ori <- read.fasta("parag.fst")
+ori
+```
+```{r}
+blast <- blast.pdb(ori)
+blast
+```
+
+```{r}
+attributes(blast)
+```
+```{r}
+```
+
+
+```{r}
+head(blast,3)
+```
+
+```{r}
+hits <- plot.blast(blast)
+```
+
+```{r}
+head(blast,3)
+```
+
+
+```{r}
+annotation <- pdb.annotate(hits$acc)
+annotation
+```
+
+
+```{r}
+
+```
+
