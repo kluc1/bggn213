@@ -17,5 +17,5 @@ Bioinformatic class at UCSD
 15. [Transcriptomics and the analysis of RNA-Seq data]()
 16. [RNA-Seq analysis mini-project]()
 17. [Vaccination rate mini project]()
-18. [Thanksgiving Day - no class today]
+18. Thanksgiving Day - no class today
 19. [Genome informatics]()
