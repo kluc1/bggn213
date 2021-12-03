@@ -2,7 +2,7 @@
 title: "Class_12"
 author: 'San Luc (PID: A59010657)'
 date: "11/5/2021"
-output: git_hub document
+output: github_document
 ---
 
 
