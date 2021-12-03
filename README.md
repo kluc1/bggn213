@@ -19,3 +19,4 @@ Bioinformatic class at UCSD
 17. [Vaccination rate mini project](https://github.com/kluc1/bggn213/blob/main/Class17/Class17_vaccine.md)
 18. Thanksgiving Day - no class today
 19. [Genome informatics]()
+20. [Gene Project]()
