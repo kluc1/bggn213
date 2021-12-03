@@ -2,9 +2,7 @@
 title: "Class09miniprojectinclass"
 author: 'San Luc (PID: A59010657)'
 date: "10/29/2021"
-output:
-  html_document: default
-  pdf_document: default
+output: github_document
 ---
 
 # Importing candy data
