@@ -132,9 +132,4 @@ load("myresults.RData")
 ```
 
 
-```{r}
-rd <- rmsd(pdbs)
-hc.rd <- hclust(dist(rd))
-grps.rd <- cutree(hc.rd, k=3)
-plot(pc.xray, 1:2, col="grey50", bg=grps.rd, pch=21, cex=1)
-```
+
