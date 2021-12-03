@@ -2,10 +2,7 @@
 title: "Class_12"
 author: 'San Luc (PID: A59010657)'
 date: "11/5/2021"
-output: html_document
-editor_options: 
-  markdown: 
-    wrap: 72
+output: git_hub document
 ---
 
 ---
