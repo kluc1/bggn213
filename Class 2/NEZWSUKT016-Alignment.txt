@@ -1,0 +1,13 @@
+# blastp
+# Iteration: 0
+# Query: gi|4504349|ref|NP_000509.1| hemoglobin subunit beta [Homo sapiens]
+# RID: NEZWSUKT016
+# Database: refseq_protein
+# Fields: query acc.ver, subject acc.ver, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score, % positives
+# 4 hits found
+gi|4504349|ref|NP_000509.1|	NP_000509.1	100.000	147	0	0	1	147	1	147	1.80e-106	301	100.00
+gi|4504349|ref|NP_000509.1|	NP_000510.1	93.197	147	10	0	1	147	1	147	7.26e-100	284	96.60
+gi|4504349|ref|NP_000509.1|	NP_005321.1	75.510	147	36	0	1	147	1	147	1.60e-82	240	88.44
+gi|4504349|ref|NP_000509.1|	NP_000175.1	73.469	147	39	0	1	147	1	147	1.83e-80	235	87.07
+
+
