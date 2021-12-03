@@ -12,6 +12,6 @@ Bioinformatic class at UCSD
 - [Halloween Candy Analysis](https://github.com/kluc1/bggn213/blob/main/class09/Class09/Class09miniprojectcandy.Rmd)
 - [Structural Bioinformatics]()
 - [12: Bioinformatics in structure prediction and design (Focus on new AlphaFold2)]()
-- [Essential UNIX for bioinformatics]
-- [Transcriptomics and the analysis of RNA-Seq data]
+- [Essential UNIX for bioinformatics]()
+- [Transcriptomics and the analysis of RNA-Seq data]()
 - 
