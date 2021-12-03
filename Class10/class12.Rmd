@@ -5,12 +5,6 @@ date: "11/5/2021"
 output: git_hub document
 ---
 
----
-title: "Class11_02inclass"
-author: 'San Luc (PID: A59010657)'
-date: "11/5/2021"
-output: html_document
----
 
 # working with bio3d
 
