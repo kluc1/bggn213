@@ -2,9 +2,7 @@
 title: "Class15_RNAseq"
 author: 'San Luc (PID: A59010657)'
 date: "11/17/2021"
-output:
-  pdf_document: default
-  html_document: default
+output: github_document
 ---
 
 
