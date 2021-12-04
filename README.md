@@ -18,5 +18,5 @@ Bioinformatic class at UCSD
 16. [RNA-Seq analysis mini-project](https://github.com/kluc1/bggn213/blob/main/Class15/Class15_RNAseq.md)
 17. [Vaccination rate mini project](https://github.com/kluc1/bggn213/blob/main/Class17/Class17_vaccine.md)
 18. Thanksgiving Day - no class today
-19. [Genome informatics]()
+19. [Genome informatics](https://github.com/kluc1/bggn213/blob/main/class18/Genetic_informatic.md)
 20. [Gene Project](https://github.com/kluc1/bggn213/blob/main/Favorite_gene_assignment/Favoritegene.md)
