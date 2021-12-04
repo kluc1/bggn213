@@ -2,7 +2,7 @@
 title: "favorite_gene_project"
 author: 'San Luc (PID: A59010657)'
 date: "11/26/2021"
-output: html_document
+output: github_document
 ---
 
 ```{r}
@@ -73,7 +73,4 @@ annotation
 ```
 
 
-```{r}
-
-```
 
